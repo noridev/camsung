@@ -4,24 +4,24 @@ plugins {
 }
 
 android {
-    compileSdkVersion 36
-    buildToolsVersion "35.0.0"
+    compileSdk = 36
 
     defaultConfig {
         applicationId "android.com.ericswpark.camsung"
-        minSdkVersion 22
-        // Do NOT change this from 22 - or else you can't write to secure settings
+        minSdk = 23
+        // Do NOT change this from 22 — the app writes to Samsung secure settings
+        // (csc_pref_camera_forced_shuttersound_key) which is blocked on targetSdk 23+
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 22
-        versionCode 9
-        versionName "1.2.1"
+        targetSdk = 22
+        versionCode = 9
+        versionName = "1.2.1"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled = true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -32,7 +32,7 @@ android {
     kotlin {
         jvmToolchain(21)
     }
-    namespace 'android.com.ericswpark.camsung'
+    namespace = 'android.com.ericswpark.camsung'
 
     dependenciesInfo {
         // Disable including dependency metadata when building APKs
@@ -45,9 +45,10 @@ android {
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.core:core-ktx:1.18.0'
+    implementation 'androidx.activity:activity-ktx:1.13.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'com.google.android.material:material:1.14.0-alpha10'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'androidx.preference:preference-ktx:1.2.1'
     testImplementation 'junit:junit:4.13.2'

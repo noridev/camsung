@@ -9,27 +9,33 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.preference.PreferenceManager
-import com.google.android.material.switchmaterial.SwitchMaterial
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.materialswitch.MaterialSwitch
 
 
 class MainActivity : AppCompatActivity() {
     private val sharedPrefKey = "android.com.ericswpark.camsung.PREFERENCES"
 
-    private lateinit var switchBtn: SwitchMaterial
-    private lateinit var lockBtn: ImageView
+    private lateinit var switchBtn: MaterialSwitch
+    private lateinit var lockBtn: MaterialButton
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         switchBtn = findViewById(R.id.main_activity_switch)
         lockBtn = findViewById(R.id.main_activity_boot_lock)
@@ -151,16 +157,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateToggle() {
-        val switch = findViewById<SwitchMaterial>(R.id.main_activity_switch)
+        val switch = findViewById<MaterialSwitch>(R.id.main_activity_switch)
         switch.isChecked = CameraHelper.isCameraMuted(contentResolver)
     }
 
     private fun updateBootToggle() {
-        val bootLockButton = findViewById<ImageView>(R.id.main_activity_boot_lock)
+        val bootLockButton = findViewById<MaterialButton>(R.id.main_activity_boot_lock)
         if (isBootEnabled()) {
-            bootLockButton.setImageResource(R.drawable.ic_baseline_lock_24)
+            bootLockButton.setIconResource(R.drawable.ic_baseline_lock_24)
         } else {
-            bootLockButton.setImageResource(R.drawable.ic_baseline_lock_open_24)
+            bootLockButton.setIconResource(R.drawable.ic_baseline_lock_open_24)
         }
     }
 
@@ -224,8 +230,7 @@ class MainActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun showPermissionDialog() {
-        val dialogBuilder = AlertDialog.Builder(this)
-        dialogBuilder
+        MaterialAlertDialogBuilder(this)
             .setTitle(R.string.main_activity_write_settings_permission_title)
             .setMessage(R.string.main_activity_write_settings_permission_message)
             .setPositiveButton(android.R.string.ok) { _, _ ->
@@ -234,9 +239,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             .setNegativeButton(android.R.string.cancel) { dialog, _ -> dialog.cancel() }
-
-        val dialog = dialogBuilder.create()
-        dialog.show()
+            .show()
     }
-
 }

@@ -2,9 +2,11 @@ package android.com.ericswpark.camsung.faq
 
 import android.com.ericswpark.camsung.R
 import android.os.Bundle
-import android.view.MenuItem
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.appbar.MaterialToolbar
 
 class FAQActivity : AppCompatActivity() {
 
@@ -21,25 +23,22 @@ class FAQActivity : AppCompatActivity() {
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_faq)
-        setTitle(R.string.main_activity_action_faq)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val collapsingToolbar = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar_layout)
+        collapsingToolbar.title = getString(R.string.main_activity_action_faq)
+
+        toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         val recyclerView = findViewById<RecyclerView>(R.id.faq_recycler_view)
         val faqAdapter = FAQAdapter(faqList)
         recyclerView.adapter = faqAdapter
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                onBackPressedDispatcher.onBackPressed()
-                return true
-            }
-
-            else -> return super.onOptionsItemSelected(item)
-        }
     }
 }

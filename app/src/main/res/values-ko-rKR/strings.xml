@@ -21,7 +21,7 @@
         Q: 스위치가 켜져 있는데 왜 아직도 카메라 셔터음이 발생하나요?
     </string>
     <string name="faq_activity_phone_mute_description">
-        휴대폰의 밸소리 볼륨이 켜져 있어서 그렇습니다. 진동이나 무음으로 변경하세요.
+        휴대폰의 벨소리 볼륨이 켜져 있어서 그렇습니다. 진동이나 무음으로 변경하세요.
     </string>
 
     <string name="faq_activity_samsung_update_title">

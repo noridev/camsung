@@ -92,3 +92,6 @@ app/release
 
 # Ignore Kotlin intermediaries
 .kotlin
+
+# Serena
+.serena
