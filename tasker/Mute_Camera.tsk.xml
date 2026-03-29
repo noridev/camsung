@@ -7,15 +7,15 @@
 		<pri>100</pri>
 		<Action sr="act0" ve="7">
 			<code>877</code>
-			<Str sr="arg0" ve="3">android.com.ericswpark.camsung.ACTION_SET_CAMERA</Str>
+			<Str sr="arg0" ve="3">moe.noridev.camsung.ACTION_SET_CAMERA</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3"/>
 			<Str sr="arg3" ve="3">app://mute</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3">android.com.ericswpark.camsung</Str>
-			<Str sr="arg8" ve="3">android.com.ericswpark.camsung.Receiver</Str>
+			<Str sr="arg7" ve="3">moe.noridev.camsung</Str>
+			<Str sr="arg8" ve="3">moe.noridev.camsung.Receiver</Str>
 			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>

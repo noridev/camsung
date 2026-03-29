@@ -1,4 +1,4 @@
-package android.com.ericswpark.camsung
+package moe.noridev.camsung
 
 import android.content.ContentResolver
 import android.provider.Settings

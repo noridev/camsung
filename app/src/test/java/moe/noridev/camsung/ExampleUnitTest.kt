@@ -1,4 +1,4 @@
-package android.com.ericswpark.camsung
+package moe.noridev.camsung
 
 import org.junit.Test
 

@@ -7,7 +7,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId "android.com.ericswpark.camsung"
+        applicationId "moe.noridev.camsung"
         minSdk = 23
         // Do NOT change this from 22 — the app writes to Samsung secure settings
         // (csc_pref_camera_forced_shuttersound_key) which is blocked on targetSdk 23+
@@ -32,7 +32,7 @@ android {
     kotlin {
         jvmToolchain(21)
     }
-    namespace = 'android.com.ericswpark.camsung'
+    namespace = 'moe.noridev.camsung'
 
     dependenciesInfo {
         // Disable including dependency metadata when building APKs

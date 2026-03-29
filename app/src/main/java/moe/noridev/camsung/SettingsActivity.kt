@@ -1,4 +1,4 @@
-package android.com.ericswpark.camsung
+package moe.noridev.camsung
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

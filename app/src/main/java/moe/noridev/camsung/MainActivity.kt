@@ -1,6 +1,6 @@
-package android.com.ericswpark.camsung
+package moe.noridev.camsung
 
-import android.com.ericswpark.camsung.faq.FAQActivity
+import moe.noridev.camsung.faq.FAQActivity
 import android.content.ComponentName
 import android.content.Intent
 import android.os.Build
@@ -23,7 +23,7 @@ import com.google.android.material.materialswitch.MaterialSwitch
 
 
 class MainActivity : AppCompatActivity() {
-    private val sharedPrefKey = "android.com.ericswpark.camsung.PREFERENCES"
+    private val sharedPrefKey = "moe.noridev.camsung.PREFERENCES"
 
     private lateinit var switchBtn: MaterialSwitch
     private lateinit var lockBtn: MaterialButton

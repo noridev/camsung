@@ -1,6 +1,6 @@
-package android.com.ericswpark.camsung.faq
+package moe.noridev.camsung.faq
 
-import android.com.ericswpark.camsung.R
+import moe.noridev.camsung.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

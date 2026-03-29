@@ -1,6 +1,6 @@
-package android.com.ericswpark.camsung.faq
+package moe.noridev.camsung.faq
 
-import android.com.ericswpark.camsung.R
+import moe.noridev.camsung.R
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity

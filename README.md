@@ -1,6 +1,6 @@
 # camsung
 
-[![IzzyOnDroid](https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/android.com.ericswpark.camsung)](https://apt.izzysoft.de/fdroid/index/apk/android.com.ericswpark.camsung)
+[![IzzyOnDroid](https://img.shields.io/endpoint?url=https://apt.izzysoft.de/fdroid/api/v1/shield/moe.noridev.camsung)](https://apt.izzysoft.de/fdroid/index/apk/moe.noridev.camsung)
 
 <div align="center">
 

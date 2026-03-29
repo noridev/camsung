@@ -1,4 +1,4 @@
-package android.com.ericswpark.camsung
+package moe.noridev.camsung
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.ClassRule
@@ -27,6 +27,6 @@ class ExampleInstrumentedTest {
 //    fun useAppContext() {
 //        // Context of the app under test.
 //        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-//        assertEquals("android.com.ericswpark.camsung", appContext.packageName)
+//        assertEquals("moe.noridev.camsung", appContext.packageName)
 //    }
 }
